@@ -1,15 +1,14 @@
 /*
-
-* SHINE SDG Icons
-* Sustainable Development Goals Icons
-*
-* Author: Thosang
-* Repository:
-* https://github.com/Thosang/shine_icons
-  */
+ * SHINE SDG Icons
+ * Sustainable Development Goals Icons
+ *
+ * Author: Thosang
+ * Repository:
+ * https://github.com/Thosang/shine_icons
+ */
 
 /* =========================================
-Base Icon
+   Base Icon
 ========================================= */
 
 .sdg-icon {
@@ -22,62 +21,56 @@ Base Icon
     background-size: contain;
 }
 
-.sdg-01 {
-    background-image: url("sgd_icons/takhon_sgd1.svg");
-}
-
 /* =========================================
-SDG 1
+   SDG 1 - 17
 ========================================= */
 
-/* .sdg-01 {
-background-image: url("./sgd_icons/takhon_sgd1.svg");
-} */
+.sdg-01 { background-image: url("./sgd_icons/takhon_sgd1.svg"); }   /* No Poverty */
+.sdg-02 { background-image: url("./sgd_icons/takhon_sgd2.svg"); }   /* Zero Hunger */
+.sdg-03 { background-image: url("./sgd_icons/takhon_sgd3.svg"); }   /* Good Health and Well-being */
+.sdg-04 { background-image: url("./sgd_icons/takhon_sgd4.svg"); }   /* Quality Education */
+.sdg-05 { background-image: url("./sgd_icons/takhon_sgd5.svg"); }   /* Gender Equality */
+.sdg-06 { background-image: url("./sgd_icons/takhon_sgd6.svg"); }   /* Clean Water and Sanitation */
+.sdg-07 { background-image: url("./sgd_icons/takhon_sgd7.svg"); }   /* Affordable and Clean Energy */
+.sdg-08 { background-image: url("./sgd_icons/takhon_sgd8.svg"); }   /* Decent Work and Economic Growth */
+.sdg-09 { background-image: url("./sgd_icons/takhon_sgd9.svg"); }   /* Industry, Innovation and Infrastructure */
+.sdg-10 { background-image: url("./sgd_icons/takhon_sgd10.svg"); }  /* Reduced Inequality */
+.sdg-11 { background-image: url("./sgd_icons/takhon_sgd11.svg"); }  /* Sustainable Cities and Communities */
+.sdg-12 { background-image: url("./sgd_icons/takhon_sgd12.svg"); }  /* Responsible Consumption and Production */
+.sdg-13 { background-image: url("./sgd_icons/takhon_sgd13.svg"); }  /* Climate Action */
+.sdg-14 { background-image: url("./sgd_icons/takhon_sgd14.svg"); }  /* Life Below Water */
+.sdg-15 { background-image: url("./sgd_icons/takhon_sgd15.svg"); }  /* Life on Land */
+.sdg-16 { background-image: url("./sgd_icons/takhon_sgd16.svg"); }  /* Peace, Justice and Strong Institutions */
+.sdg-17 { background-image: url("./sgd_icons/takhon_sgd17.svg"); }  /* Partnerships for the Goals */
 
 /* =========================================
-SDG 2
-========================================= */
-
-.sdg-02 {
-background-image: url("./sgd_icons/takhon_sgd2.svg");
-}
-
-/* =========================================
-SDG 3
-========================================= */
-
-.sdg-03 {
-background-image: url("./sgd_icons/takhon_sgd3.svg");
-}
-
-/* =========================================
-Utility Sizes
+   Utility Sizes
 ========================================= */
 
 .sdg-sm {
-width: 32px;
-height: 32px;
+    width: 32px;
+    height: 32px;
 }
 
 .sdg-md {
-width: 64px;
-height: 64px;
+    width: 64px;
+    height: 64px;
 }
 
 .sdg-lg {
-width: 128px;
-height: 128px;
+    width: 128px;
+    height: 128px;
 }
 
 .sdg-xl {
-width: 256px;
-height: 256px;
+    width: 256px;
+    height: 256px;
 }
 
 /* =========================================
-Accessibility
+   Accessibility
 ========================================= */
 
 .sdg-icon[aria-hidden="true"] {
-pointer-events: none;
+    pointer-events: none;
 }
