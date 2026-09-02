@@ -1,76 +1,463 @@
-/*
- * SHINE SDG Icons
- * Sustainable Development Goals Icons
- *
- * Author: Thosang
- * Repository:
- * https://github.com/Thosang/shine_icons
- */
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHINE SDG Icons</title>
 
-/* =========================================
-   Base Icon
-========================================= */
+<!-- SDG Icons CSS -->
+<link rel="stylesheet" href="sdg-icons.css">
 
-.sdg-icon {
-    display: inline-block;
-    width: 150px;
-    height: 150px;
-
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+header {
+  background: white;
+  text-align: center;
+  padding: 50px 20px;
+  border-bottom: 1px solid #ddd;
+}
+header h1 {
+  margin: 0 0 10px;
+  font-size: 38px;
+}
+header p {
+  color: #666;
+  font-size: 18px;
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+section {
+  margin-bottom: 60px;
+}
+h2 {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
 }
 
-/* =========================================
-   SDG 1 - 17
-========================================= */
-
-.sdg-01 { background-image: url("./sgd_icons/takhon_sgd1.svg"); }   /* No Poverty */
-.sdg-02 { background-image: url("./sgd_icons/takhon_sgd2.svg"); }   /* Zero Hunger */
-.sdg-03 { background-image: url("./sgd_icons/takhon_sgd3.svg"); }   /* Good Health and Well-being */
-.sdg-04 { background-image: url("./sgd_icons/takhon_sgd4.svg"); }   /* Quality Education */
-.sdg-05 { background-image: url("./sgd_icons/takhon_sgd5.svg"); }   /* Gender Equality */
-.sdg-06 { background-image: url("./sgd_icons/takhon_sgd6.svg"); }   /* Clean Water and Sanitation */
-.sdg-07 { background-image: url("./sgd_icons/takhon_sgd7.svg"); }   /* Affordable and Clean Energy */
-.sdg-08 { background-image: url("./sgd_icons/takhon_sgd8.svg"); }   /* Decent Work and Economic Growth */
-.sdg-09 { background-image: url("./sgd_icons/takhon_sgd9.svg"); }   /* Industry, Innovation and Infrastructure */
-.sdg-10 { background-image: url("./sgd_icons/takhon_sgd10.svg"); }  /* Reduced Inequality */
-.sdg-11 { background-image: url("./sgd_icons/takhon_sgd11.svg"); }  /* Sustainable Cities and Communities */
-.sdg-12 { background-image: url("./sgd_icons/takhon_sgd12.svg"); }  /* Responsible Consumption and Production */
-.sdg-13 { background-image: url("./sgd_icons/takhon_sgd13.svg"); }  /* Climate Action */
-.sdg-14 { background-image: url("./sgd_icons/takhon_sgd14.svg"); }  /* Life Below Water */
-.sdg-15 { background-image: url("./sgd_icons/takhon_sgd15.svg"); }  /* Life on Land */
-.sdg-16 { background-image: url("./sgd_icons/takhon_sgd16.svg"); }  /* Peace, Justice and Strong Institutions */
-.sdg-17 { background-image: url("./sgd_icons/takhon_sgd17.svg"); }  /* Partnerships for the Goals */
-
-/* =========================================
-   Utility Sizes
-========================================= */
-
-.sdg-sm {
-    width: 32px;
-    height: 32px;
+/* =========================
+   Icon Gallery
+========================= */
+.icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+.icon-card {
+  background: white;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+.icon-card .sdg-icon {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+.icon-card h3 {
+  margin: 15px 0 4px;
+  font-size: 15px;
+}
+.icon-card p {
+  margin: 0;
+  font-size: 12px;
+  color: #888;
 }
 
-.sdg-md {
-    width: 64px;
-    height: 64px;
+/* =========================
+   Code
+========================= */
+pre {
+  background: #1e1e1e;
+  color: #eee;
+  padding: 20px;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+code {
+  font-family: Consolas, monospace;
 }
 
-.sdg-lg {
-    width: 128px;
-    height: 128px;
+/* =========================
+   Example Box
+========================= */
+.example {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.example-icon {
+  margin: 20px 0;
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 8px;
 }
 
-.sdg-xl {
-    width: 256px;
-    height: 256px;
+/* =========================
+   Size Examples
+========================= */
+.size-demo {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.size-item {
+  text-align: center;
+}
+.size-item p {
+  margin: 8px 0;
+  color: #666;
 }
 
-/* =========================================
-   Accessibility
-========================================= */
-
-.sdg-icon[aria-hidden="true"] {
-    pointer-events: none;
+/* =========================
+   Class Reference table
+========================= */
+.class-ref-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
 }
+.class-ref-table th, .class-ref-table td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid #eee;
+}
+.class-ref-table code {
+  background: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  background: white;
+  color: #777;
+}
+</style>
+</head>
+<body>
+
+<!-- ======================================
+     Header
+====================================== -->
+<header>
+  <h1>🌏 THE Thor Icons</h1>
+  <p>THE Thor Icons</p>
+</header>
+
+<div class="container">
+
+  <!-- ======================================
+       1. Icon Gallery
+  ====================================== -->
+  <section>
+    <h2>Icon Gallery</h2>
+    <div class="icons">
+
+      <div class="icon-card"><div class="sdg-icon sdg-01"></div><h3>SDG 1</h3><p>ขจัดความยากจน</p><code>sdg-01</code></div>
+      <div class="icon-card"><div class="sdg-icon sdg-02"></div><h3>SDG 2</h3><p>ขจัดความอดอยาก</p><code>sdg-02</code></div>
+      <div class="icon-card"><div class="sdg-icon sdg-03"></div><h3>SDG 3</h3><p>สุขภาพและความเป็นอยู่ที่ดี</p><code>sdg-03</code></div>
+      <div class="icon-card"><div class="sdg-icon sdg-04"></div><h3>SDG 4</h3><p>การศึกษาที่มีคุณภาพ</p><code>sdg-04</code></div>
+      <div class="icon-card"><div class="sdg-icon sdg-05"></div><h3>SDG 5</h3><p>ความเท่าเทียมทางเพศ</p><code>sdg-05</code></div>
+      <div class="icon-card"><div class="sdg-icon sdg-06"></div><h3>SDG 6</h3><p>น้ำสะอาดและสุขาภิบาล</p><code>sdg-06</code></div>
+      <div class="icon-card"><div class="sdg-icon sdg-07"></div><h3>SDG 7</h3><p>พลังงานสะอาดที่ทุกคนเข้าถึงได้</p><code>sdg-07</code></div>
+      <div class="icon-card"><div class="sdg-icon sdg-08"></div><h3>SDG 8</h3><p>งานที่มีคุณค่าและการเติบโตทางเศรษฐกิจ</p><code>sdg-08</code></div>
+      <div class="icon-card"><div class="sdg-icon sdg-09"></div><h3>SDG 9</h3><p>อุตสาหกรรม นวัตกรรม โครงสร้างพื้นฐาน</p><code>sdg-09</code></div>
+      <div class="icon-card"><div class="sdg-icon sdg-10"></div><h3>SDG 10</h3><p>ลดความเหลื่อมล้ำ</p><code>sdg-10</code></div>
+      <div class="icon-card"><div class="sdg-icon sdg-11"></div><h3>SDG 11</h3><p>เมืองและชุมชนที่ยั่งยืน</p><code>sdg-11</code></div>
+      <div class="icon-card"><div class="sdg-icon sdg-12"></div><h3>SDG 12</h3><p>การผลิตและบริโภคที่ยั่งยืน</p><code>sdg-12</code></div>
+      <div class="icon-card"><div class="sdg-icon sdg-13"></div><h3>SDG 13</h3><p>การรับมือการเปลี่ยนแปลงสภาพภูมิอากาศ</p><code>sdg-13</code></div>
+      <div class="icon-card"><div class="sdg-icon sdg-14"></div><h3>SDG 14</h3><p>การใช้ประโยชน์จากมหาสมุทรและทรัพยากรทางทะเล</p><code>sdg-14</code></div>
+      <div class="icon-card"><div class="sdg-icon sdg-15"></div><h3>SDG 15</h3><p>การใช้ประโยชน์จากระบบนิเวศทางบก</p><code>sdg-15</code></div>
+      <div class="icon-card"><div class="sdg-icon sdg-16"></div><h3>SDG 16</h3><p>สังคมสงบสุข ยุติธรรม ไม่แบ่งแยก</p><code>sdg-16</code></div>
+      <div class="icon-card"><div class="sdg-icon sdg-17"></div><h3>SDG 17</h3><p>ความร่วมมือเพื่อการพัฒนาที่ยั่งยืน</p><code>sdg-17</code></div>
+
+    </div>
+  </section>
+
+  <!-- ======================================
+       2. Installation
+  ====================================== -->
+  <section>
+    <h2>Installation</h2>
+    <p>
+      เพิ่ม CSS ของ SHINE SDG Icons
+      ในหน้า HTML ของคุณ
+    </p>
+    <pre><code>&lt;link rel="stylesheet"
+href="https://thosang.github.io/shine_icons/sdg-icons.css"&gt;</code></pre>
+  </section>
+
+  <!-- ======================================
+       3. Using with DIV
+  ====================================== -->
+  <section>
+    <h2>Usage with &lt;div&gt;</h2>
+    <p>
+      สามารถใช้ Icon ด้วย class
+      <code>sdg-icon</code>
+      และ class ของ SDG
+    </p>
+    <div class="example">
+      <h3>HTML</h3>
+      <pre><code>&lt;div class="sdg-icon sdg-01"&gt;&lt;/div&gt;</code></pre>
+      <h3>Result</h3>
+      <div class="example-icon">
+        <div class="sdg-icon sdg-01"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================
+       4. Using with I
+  ====================================== -->
+  <section>
+    <h2>Usage with &lt;i&gt;</h2>
+    <p>
+      สามารถใช้ Icon กับ
+      <code>&lt;i&gt;</code>
+      ได้เช่นเดียวกัน
+    </p>
+    <div class="example">
+      <h3>HTML</h3>
+      <pre><code>&lt;i class="sdg-icon sdg-01"&gt;&lt;/i&gt;</code></pre>
+      <h3>Result</h3>
+      <div class="example-icon">
+        <i class="sdg-icon sdg-01"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================
+       5. Multiple Icons
+  ====================================== -->
+  <section>
+    <h2>Multiple Icons</h2>
+    <div class="example">
+      <pre><code>&lt;i class="sdg-icon sdg-01"&gt;&lt;/i&gt;
+&lt;i class="sdg-icon sdg-02"&gt;&lt;/i&gt;
+&lt;i class="sdg-icon sdg-03"&gt;&lt;/i&gt;</code></pre>
+      <div class="example-icon">
+        <i class="sdg-icon sdg-01"></i>
+        <i class="sdg-icon sdg-02"></i>
+        <i class="sdg-icon sdg-03"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================
+       6. วิธีการใช้งาน: กำหนดขนาดไอคอน
+  ====================================== -->
+  <section>
+    <h2>วิธีการใช้งาน: กำหนดขนาดไอคอน</h2>
+
+    <p>
+      ไอคอนทุกตัวมีขนาดเริ่มต้นที่ <code>150px x 150px</code>
+      แต่คุณสามารถปรับขนาดได้ 2 วิธี คือใช้
+      <strong>class สำเร็จรูป</strong> หรือ
+      <strong>กำหนดขนาดเอง</strong> ด้วย CSS
+    </p>
+
+    <!-- วิธีที่ 1: class สำเร็จรูป -->
+    <div class="example">
+      <h3>วิธีที่ 1: ใช้ class ขนาดสำเร็จรูป</h3>
+      <p>
+        เพิ่ม class ขนาดต่อท้าย <code>sdg-icon</code>
+        ได้ทันที ไม่ต้องเขียน CSS เพิ่มเอง
+      </p>
+
+      <pre><code>&lt;i class="sdg-icon sdg-01 sdg-sm"&gt;&lt;/i&gt;
+&lt;i class="sdg-icon sdg-01 sdg-md"&gt;&lt;/i&gt;
+&lt;i class="sdg-icon sdg-01 sdg-lg"&gt;&lt;/i&gt;
+&lt;i class="sdg-icon sdg-01 sdg-xl"&gt;&lt;/i&gt;</code></pre>
+
+      <h3>ผลลัพธ์</h3>
+      <div class="example-icon">
+        <div class="size-demo">
+
+          <div class="size-item">
+            <i class="sdg-icon sdg-01 sdg-sm"></i>
+            <p><code>sdg-sm</code><br>32px</p>
+          </div>
+
+          <div class="size-item">
+            <i class="sdg-icon sdg-01 sdg-md"></i>
+            <p><code>sdg-md</code><br>64px</p>
+          </div>
+
+          <div class="size-item">
+            <i class="sdg-icon sdg-01 sdg-lg"></i>
+            <p><code>sdg-lg</code><br>128px</p>
+          </div>
+
+          <div class="size-item">
+            <i class="sdg-icon sdg-01 sdg-xl"></i>
+            <p><code>sdg-xl</code><br>256px</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- วิธีที่ 2: กำหนดขนาดเอง -->
+    <div class="example">
+      <h3>วิธีที่ 2: กำหนดขนาดเอง (Custom Size)</h3>
+      <p>
+        ถ้าต้องการขนาดที่ไม่ตรงกับ class สำเร็จรูป
+        สามารถกำหนดขนาดเองผ่าน <code>style</code>
+        หรือเขียน CSS class ของตัวเองได้
+      </p>
+
+      <pre><code>&lt;i class="sdg-icon sdg-01" style="width:100px;height:100px;"&gt;&lt;/i&gt;</code></pre>
+
+      <h3>ผลลัพธ์</h3>
+      <div class="example-icon">
+        <div class="size-demo">
+
+          <div class="size-item">
+            <i class="sdg-icon sdg-01" style="width:40px;height:40px;"></i>
+            <p>40px</p>
+          </div>
+
+          <div class="size-item">
+            <i class="sdg-icon sdg-01" style="width:100px;height:100px;"></i>
+            <p>100px</p>
+          </div>
+
+          <div class="size-item">
+            <i class="sdg-icon sdg-01" style="width:180px;height:180px;"></i>
+            <p>180px</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ตัวอย่างการใช้งานจริง -->
+    <div class="example">
+      <h3>ตัวอย่างการใช้งานจริง: การ์ดแสดงเป้าหมาย SDG</h3>
+      <p>
+        ผสม class ขนาดเข้ากับข้อความ เพื่อสร้างการ์ดแสดงรายการเป้าหมาย
+      </p>
+
+      <pre><code>&lt;div class="icon-card"&gt;
+  &lt;i class="sdg-icon sdg-02 sdg-lg"&gt;&lt;/i&gt;
+  &lt;h3&gt;SDG 2: Zero Hunger&lt;/h3&gt;
+&lt;/div&gt;</code></pre>
+
+      <h3>ผลลัพธ์</h3>
+      <div class="example-icon">
+        <div class="icon-card" style="max-width:220px;margin:auto;">
+          <i class="sdg-icon sdg-02 sdg-lg"></i>
+          <h3>SDG 2: Zero Hunger</h3>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ======================================
+       7. Class Reference
+  ====================================== -->
+  <section>
+    <h2>Class Reference</h2>
+    <div class="example">
+      <p>Base class:</p>
+      <pre><code>sdg-icon</code></pre>
+
+      <table class="class-ref-table">
+        <thead>
+          <tr><th>SDG</th><th>Class</th><th>ชื่อเป้าหมาย</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>SDG 1</td><td><code>sdg-01</code></td><td>ขจัดความยากจน</td></tr>
+          <tr><td>SDG 2</td><td><code>sdg-02</code></td><td>ขจัดความอดอยาก</td></tr>
+          <tr><td>SDG 3</td><td><code>sdg-03</code></td><td>สุขภาพและความเป็นอยู่ที่ดี</td></tr>
+          <tr><td>SDG 4</td><td><code>sdg-04</code></td><td>การศึกษาที่มีคุณภาพ</td></tr>
+          <tr><td>SDG 5</td><td><code>sdg-05</code></td><td>ความเท่าเทียมทางเพศ</td></tr>
+          <tr><td>SDG 6</td><td><code>sdg-06</code></td><td>น้ำสะอาดและสุขาภิบาล</td></tr>
+          <tr><td>SDG 7</td><td><code>sdg-07</code></td><td>พลังงานสะอาดที่ทุกคนเข้าถึงได้</td></tr>
+          <tr><td>SDG 8</td><td><code>sdg-08</code></td><td>งานที่มีคุณค่าและการเติบโตทางเศรษฐกิจ</td></tr>
+          <tr><td>SDG 9</td><td><code>sdg-09</code></td><td>อุตสาหกรรม นวัตกรรม โครงสร้างพื้นฐาน</td></tr>
+          <tr><td>SDG 10</td><td><code>sdg-10</code></td><td>ลดความเหลื่อมล้ำ</td></tr>
+          <tr><td>SDG 11</td><td><code>sdg-11</code></td><td>เมืองและชุมชนที่ยั่งยืน</td></tr>
+          <tr><td>SDG 12</td><td><code>sdg-12</code></td><td>การผลิตและบริโภคที่ยั่งยืน</td></tr>
+          <tr><td>SDG 13</td><td><code>sdg-13</code></td><td>การรับมือการเปลี่ยนแปลงสภาพภูมิอากาศ</td></tr>
+          <tr><td>SDG 14</td><td><code>sdg-14</code></td><td>การใช้ประโยชน์จากมหาสมุทรและทรัพยากรทางทะเล</td></tr>
+          <tr><td>SDG 15</td><td><code>sdg-15</code></td><td>การใช้ประโยชน์จากระบบนิเวศทางบก</td></tr>
+          <tr><td>SDG 16</td><td><code>sdg-16</code></td><td>สังคมสงบสุข ยุติธรรม ไม่แบ่งแยก</td></tr>
+          <tr><td>SDG 17</td><td><code>sdg-17</code></td><td>ความร่วมมือเพื่อการพัฒนาที่ยั่งยืน</td></tr>
+        </tbody>
+      </table>
+
+      <p style="margin-top:20px;">ขนาด (Size utility):</p>
+      <pre><code>sdg-sm   /* 32px  */
+sdg-md   /* 64px  */
+sdg-lg   /* 128px */
+sdg-xl   /* 256px */</code></pre>
+    </div>
+  </section>
+
+  <!-- ======================================
+       8. Complete Example
+  ====================================== -->
+  <section>
+    <h2>Complete Example</h2>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;link rel="stylesheet"
+href="https://thosang.github.io/shine_icons/sdg-icons.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Sustainable Development Goals&lt;/h1&gt;
+
+&lt;i class="sdg-icon sdg-01 sdg-lg"&gt;&lt;/i&gt;
+&lt;i class="sdg-icon sdg-02 sdg-lg"&gt;&lt;/i&gt;
+&lt;i class="sdg-icon sdg-03 sdg-lg"&gt;&lt;/i&gt;
+&lt;i class="sdg-icon sdg-04 sdg-lg"&gt;&lt;/i&gt;
+&lt;i class="sdg-icon sdg-05 sdg-lg"&gt;&lt;/i&gt;
+&lt;i class="sdg-icon sdg-06 sdg-lg"&gt;&lt;/i&gt;
+&lt;i class="sdg-icon sdg-07 sdg-lg"&gt;&lt;/i&gt;
+&lt;i class="sdg-icon sdg-08 sdg-lg"&gt;&lt;/i&gt;
+&lt;i class="sdg-icon sdg-09 sdg-lg"&gt;&lt;/i&gt;
+&lt;i class="sdg-icon sdg-10 sdg-lg"&gt;&lt;/i&gt;
+&lt;i class="sdg-icon sdg-11 sdg-lg"&gt;&lt;/i&gt;
+&lt;i class="sdg-icon sdg-12 sdg-lg"&gt;&lt;/i&gt;
+&lt;i class="sdg-icon sdg-13 sdg-lg"&gt;&lt;/i&gt;
+&lt;i class="sdg-icon sdg-14 sdg-lg"&gt;&lt;/i&gt;
+&lt;i class="sdg-icon sdg-15 sdg-lg"&gt;&lt;/i&gt;
+&lt;i class="sdg-icon sdg-16 sdg-lg"&gt;&lt;/i&gt;
+&lt;i class="sdg-icon sdg-17 sdg-lg"&gt;&lt;/i&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  </section>
+
+</div>
+
+<!-- ======================================
+     Footer
+====================================== -->
+<footer>
+  The THOR Icons<br>
+  GitHub: Thosang / shine_icons
+</footer>
+
+</body>
+</html>
