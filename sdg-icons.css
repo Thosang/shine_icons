@@ -1,0 +1,85 @@
+/*
+
+* SHINE SDG Icons
+* Sustainable Development Goals Icons
+*
+* Author: Thosang
+* Repository:
+* https://github.com/Thosang/shine_icons
+  */
+
+/* =========================================
+Base Icon
+========================================= */
+
+.sdg-icon {
+display: inline-block;
+
+```
+width: 100px;
+height: 100px;
+
+background-repeat: no-repeat;
+background-position: center;
+background-size: contain;
+
+vertical-align: middle;
+```
+
+}
+
+/* =========================================
+SDG 1
+========================================= */
+
+.sdg-01 {
+background-image: url("./sgd_icons/takhon_sgd1.svg");
+}
+
+/* =========================================
+SDG 2
+========================================= */
+
+.sdg-02 {
+background-image: url("./sgd_icons/takhon_sgd2.svg");
+}
+
+/* =========================================
+SDG 3
+========================================= */
+
+.sdg-03 {
+background-image: url("./sgd_icons/takhon_sgd3.svg");
+}
+
+/* =========================================
+Utility Sizes
+========================================= */
+
+.sdg-sm {
+width: 32px;
+height: 32px;
+}
+
+.sdg-md {
+width: 64px;
+height: 64px;
+}
+
+.sdg-lg {
+width: 128px;
+height: 128px;
+}
+
+.sdg-xl {
+width: 256px;
+height: 256px;
+}
+
+/* =========================================
+Accessibility
+========================================= */
+
+.sdg-icon[aria-hidden="true"] {
+pointer-events: none;
+}
