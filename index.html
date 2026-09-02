@@ -8,6 +8,7 @@
 
 <title>SHINE SDG Icons</title>
 
+<!-- SDG Icons CSS -->
 <link rel="stylesheet" href="sdg-icons.css">
 
 <style>
@@ -23,89 +24,130 @@
     }
 
     header {
-        text-align: center;
-        padding: 50px 20px 30px;
         background: white;
+        text-align: center;
+        padding: 50px 20px;
+        border-bottom: 1px solid #ddd;
     }
 
     header h1 {
         margin: 0 0 10px;
-        font-size: 36px;
+        font-size: 38px;
     }
 
     header p {
         color: #666;
-        margin: 0;
+        font-size: 18px;
     }
 
     .container {
         max-width: 1100px;
-        margin: 40px auto;
-        padding: 0 20px;
+        margin: auto;
+        padding: 40px 20px;
     }
+
+    section {
+        margin-bottom: 60px;
+    }
+
+    h2 {
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 10px;
+    }
+
+    /* =========================
+       Icon Gallery
+       ========================= */
 
     .icons {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns:
+            repeat(auto-fit, minmax(200px, 1fr));
+
         gap: 20px;
     }
 
     .icon-card {
         background: white;
-        border-radius: 16px;
         padding: 30px 20px;
         text-align: center;
-        box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-        transition: transform 0.2s;
-    }
+        border-radius: 16px;
 
-    .icon-card:hover {
-        transform: translateY(-5px);
+        box-shadow:
+            0 3px 12px rgba(0,0,0,0.08);
     }
 
     .icon-card .sdg-icon {
         width: 120px;
         height: 120px;
-        margin: 0 auto 20px;
+        margin: auto;
     }
 
     .icon-card h3 {
-        margin: 10px 0;
+        margin: 15px 0 8px;
     }
 
-    .code {
-        display: inline-block;
-        padding: 6px 10px;
-        background: #f0f0f0;
-        border-radius: 6px;
-        font-family: monospace;
-        font-size: 13px;
-    }
+    /* =========================
+       Code
+       ========================= */
 
-    .usage {
-        margin-top: 50px;
-        background: #222;
-        color: white;
-        padding: 30px;
-        border-radius: 16px;
-    }
-
-    .usage h2 {
-        margin-top: 0;
-    }
-
-    .usage code {
-        display: block;
-        background: #111;
+    pre {
+        background: #1e1e1e;
+        color: #eee;
         padding: 20px;
-        border-radius: 8px;
+        border-radius: 10px;
         overflow-x: auto;
-        line-height: 1.6;
+    }
+
+    code {
+        font-family: Consolas, monospace;
+    }
+
+    /* =========================
+       Example Box
+       ========================= */
+
+    .example {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        margin-top: 20px;
+
+        box-shadow:
+            0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .example-icon {
+        margin: 20px 0;
+        padding: 20px;
+        background: #f5f5f5;
+        border-radius: 8px;
+    }
+
+    /* =========================
+       Size Examples
+       ========================= */
+
+    .size-demo {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .size-item {
+        text-align: center;
+    }
+
+    .size-item p {
+        margin: 8px 0;
+        color: #666;
     }
 
     footer {
         text-align: center;
         padding: 40px;
+        background: white;
         color: #777;
     }
 </style>
@@ -115,68 +157,380 @@
 
 <body>
 
+<!-- ======================================
+     Header
+     ====================================== -->
+
 <header>
-    <h1>🌏 SHINE SDG Icons</h1>
-    <p>Free Sustainable Development Goals Icon Library</p>
+
+
+<h1>🌏 THE Thor Icons</h1>
+
+<p>
+    THE Thor Icons
+</p>
+
+
 </header>
 
 <div class="container">
 
 
-<div class="icons">
+<!-- ======================================
+     1. Icon Gallery
+     ====================================== -->
 
-    <!-- SDG 1 -->
-    <div class="icon-card">
-        <div class="sdg-icon sdg-01"></div>
-        <h3>SDG 1</h3>
-        <span class="code">sdg-01</span>
+<section>
+
+    <h2>Icon Gallery</h2>
+
+    <div class="icons">
+
+
+        <div class="icon-card">
+
+            <div class="sdg-icon sdg-01"></div>
+
+            <h3>SDG 1</h3>
+
+            <code>sdg-01</code>
+
+        </div>
+
+
+        <div class="icon-card">
+
+            <div class="sdg-icon sdg-02"></div>
+
+            <h3>SDG 2</h3>
+
+            <code>sdg-02</code>
+
+        </div>
+
+
+        <div class="icon-card">
+
+            <div class="sdg-icon sdg-03"></div>
+
+            <h3>SDG 3</h3>
+
+            <code>sdg-03</code>
+
+        </div>
+
+
     </div>
 
+</section>
 
-    <!-- SDG 2 -->
-    <div class="icon-card">
-        <div class="sdg-icon sdg-02"></div>
-        <h3>SDG 2</h3>
-        <span class="code">sdg-02</span>
+
+
+<!-- ======================================
+     2. Installation
+     ====================================== -->
+
+<section>
+
+    <h2>Installation</h2>
+
+    <p>
+        เพิ่ม CSS ของ SHINE SDG Icons
+        ในหน้า HTML ของคุณ
+    </p>
+
+    <pre><code>&lt;link rel="stylesheet"
+
+
+href="https://thosang.github.io/shine_icons/sdg-icons.css"></code></pre>
+
+
+</section>
+
+
+
+<!-- ======================================
+     3. Using with DIV
+     ====================================== -->
+
+<section>
+
+    <h2>Usage with &lt;div&gt;</h2>
+
+    <p>
+        สามารถใช้ Icon ด้วย class
+        <code>sdg-icon</code>
+        และ class ของ SDG
+    </p>
+
+
+    <div class="example">
+
+        <h3>HTML</h3>
+
+        <pre><code>&lt;div class="sdg-icon sdg-01"&gt;&lt;/div&gt;</code></pre>
+
+
+        <h3>Result</h3>
+
+        <div class="example-icon">
+
+            <div class="sdg-icon sdg-01"></div>
+
+        </div>
+
     </div>
 
+</section>
 
-    <!-- SDG 3 -->
-    <div class="icon-card">
-        <div class="sdg-icon sdg-03"></div>
-        <h3>SDG 3</h3>
-        <span class="code">sdg-03</span>
+
+
+<!-- ======================================
+     4. Using with I
+     ====================================== -->
+
+<section>
+
+    <h2>Usage with &lt;i&gt;</h2>
+
+    <p>
+        สามารถใช้ Icon กับ
+        <code>&lt;i&gt;</code>
+        ได้เช่นเดียวกัน
+    </p>
+
+
+    <div class="example">
+
+        <h3>HTML</h3>
+
+        <pre><code>&lt;i class="sdg-icon sdg-01"&gt;&lt;/i&gt;</code></pre>
+
+
+        <h3>Result</h3>
+
+        <div class="example-icon">
+
+            <i class="sdg-icon sdg-01"></i>
+
+        </div>
+
     </div>
+
+</section>
+
+
+
+<!-- ======================================
+     5. Multiple Icons
+     ====================================== -->
+
+<section>
+
+    <h2>Multiple Icons</h2>
+
+
+    <div class="example">
+
+        <pre><code>&lt;i class="sdg-icon sdg-01"&gt;&lt;/i&gt;
+
+
+<i class="sdg-icon sdg-02"></i>
+
+<i class="sdg-icon sdg-03"></i></code></pre>
+
+
+        <div class="example-icon">
+
+            <i class="sdg-icon sdg-01"></i>
+
+            <i class="sdg-icon sdg-02"></i>
+
+            <i class="sdg-icon sdg-03"></i>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================================
+     6. Size
+     ====================================== -->
+
+<section>
+
+    <h2>Icon Size</h2>
+
+    <p>
+        สามารถกำหนดขนาด Icon ได้ด้วย CSS
+    </p>
+
+
+    <div class="example">
+
+        <div class="size-demo">
+
+
+            <div class="size-item">
+
+                <i
+                    class="sdg-icon sdg-01"
+                    style="width:40px;height:40px;">
+                </i>
+
+                <p>40px</p>
+
+            </div>
+
+
+            <div class="size-item">
+
+                <i
+                    class="sdg-icon sdg-01"
+                    style="width:80px;height:80px;">
+                </i>
+
+                <p>80px</p>
+
+            </div>
+
+
+            <div class="size-item">
+
+                <i
+                    class="sdg-icon sdg-01"
+                    style="width:120px;height:120px;">
+                </i>
+
+                <p>120px</p>
+
+            </div>
+
+
+            <div class="size-item">
+
+                <i
+                    class="sdg-icon sdg-01"
+                    style="width:180px;height:180px;">
+                </i>
+
+                <p>180px</p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================================
+     7. Class Reference
+     ====================================== -->
+
+<section>
+
+    <h2>Class Reference</h2>
+
+
+    <div class="example">
+
+        <p>
+            Base class:
+        </p>
+
+        <pre><code>sdg-icon</code></pre>
+
+
+        <p>
+            SDG 1:
+        </p>
+
+        <pre><code>sdg-01</code></pre>
+
+
+        <p>
+            SDG 2:
+        </p>
+
+        <pre><code>sdg-02</code></pre>
+
+
+        <p>
+            SDG 3:
+        </p>
+
+        <pre><code>sdg-03</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================================
+     8. Complete Example
+     ====================================== -->
+
+<section>
+
+    <h2>Complete Example</h2>
+
+    <pre><code>&lt;!DOCTYPE html&gt;
+
+
+<html>
+
+<head>
+
+
+&lt;link rel="stylesheet"
+href="https://thosang.github.io/shine_icons/sdg-icons.css"&gt;
+
+
+</head>
+
+<body>
+
+
+&lt;h1&gt;Sustainable Development Goals&lt;/h1&gt;
+
+&lt;i class="sdg-icon sdg-01"&gt;&lt;/i&gt;
+
+&lt;i class="sdg-icon sdg-02"&gt;&lt;/i&gt;
+
+&lt;i class="sdg-icon sdg-03"&gt;&lt;/i&gt;
+
+
+</body>
+
+</html></code></pre>
+
+
+</section>
+
 
 </div>
 
-
-<div class="usage">
-
-    <h2>How to use</h2>
-
-    <p>Include the following CSS file:</p>
-
-    <code>
-
-
-<link rel="stylesheet"
-href="https://thosang.github.io/shine_icons/sdg-icons.css"> </code>
-
-
-    <p>Then use the icon:</p>
-
-    <code>
-
-
-<div class="sdg-icon sdg-01"></div> </code>
-
-</div>
-
-</div>
+<!-- ======================================
+     Footer
+     ====================================== -->
 
 <footer>
-    SHINE SDG Icons · Thosang
+
+
+The THOR Icons<br>
+
+GitHub:
+Thosang / shine_icons
+
+
 </footer>
 
 </body>
