@@ -13,28 +13,26 @@ Base Icon
 ========================================= */
 
 .sdg-icon {
-display: inline-block;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
 
-width: 100px;
-height: 100px;
-
-background-repeat: no-repeat;
-background-position: center;
-background-size: contain;
-
-vertical-align: middle;
-
-
+.sdg-01 {
+    background-image: url("sgd_icons/takhon_sgd1.svg");
 }
 
 /* =========================================
 SDG 1
 ========================================= */
 
-.sdg-01 {
+/* .sdg-01 {
 background-image: url("./sgd_icons/takhon_sgd1.svg");
-}
+} */
 
 /* =========================================
 SDG 2
