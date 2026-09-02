@@ -15,7 +15,7 @@ Base Icon
 .sdg-icon {
 display: inline-block;
 
-```
+
 width: 100px;
 height: 100px;
 
@@ -24,7 +24,7 @@ background-position: center;
 background-size: contain;
 
 vertical-align: middle;
-```
+
 
 }
 
